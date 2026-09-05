@@ -1,0 +1,67 @@
+# THE channel config. Loaded and validated by src/config.py.
+# One entry per channel. This repo hosts exactly one.
+
+channels:
+  - id: channel_9                         # unique; used in DB, logs, secret names
+    tiktok_username: "las_finanzas_personales"   # no @ -- Spanish personal-finance education (176.9K followers)
+    youtube_channel_name: "Dinero Claro"
+    owner_email: "dhakerkrishti@gmail.com"
+
+    google_credentials_file: "credentials/channel_9_client_secret.json"
+    oauth_token_file: "tokens/channel_9_token.json"
+
+    videos_per_day: 1
+    description_footer: "Contenido educativo, no es asesoria financiera. Invierte informandote y bajo tu propia responsabilidad."
+    default_tags: [finanzas personales, como ahorrar dinero, salir de deudas, presupuesto personal,
+                   invertir desde cero, inversiones para principiantes, libertad financiera,
+                   educacion financiera, ingresos pasivos, interes compuesto, fondo de emergencia,
+                   habitos de dinero, finanzas para jovenes, como administrar el dinero, ahorro,
+                   dinero, economia personal, consejos financieros, como invertir, riqueza]
+    youtube_category_id: "27"             # 27 Education
+    enabled: true
+    max_retry_days: 7
+
+    content_mode: longform                # no #Shorts tag, keep source aspect
+    shorts_max_seconds: 180
+    min_video_seconds: 45                 # finance clips vary; skip nothing substantial
+    max_video_seconds: 1800               # up to 30 min
+
+    upload_mode: popular_only             # always pick the most-viewed unposted video
+    max_download_candidates: 20
+
+    use_ai_seo: true
+    seo_language: "es"                    # Gemini writes Spanish title/description/tags
+    edit:
+      enabled: true
+      zoom_crop_pct: 2.0
+      speed: 1.02
+      hflip: false
+      fade_seconds: 0.4
+      sharpen: true
+      denoise: false
+      saturation: 1.03
+      contrast: 1.03
+      loudnorm: true
+      volume_gain_db: 0.0
+      blur_regions: []
+      brand_overlay:                     # small corner mark = the channel's own logo
+        enabled: true
+        image: "assets/brand_badge.png"
+        corner: tr
+        width_pct: 10
+        margin_pct: 3
+        opacity: 0.9
+
+    thumbnail:
+      enabled: true
+      hook_source: title
+      position: bottom
+      accent_rgb: [16, 185, 129]
+      hook_templates:
+        - "TU DINERO EN ORDEN"
+        - "NADIE TE LO DICE"
+        - "EMPIEZA HOY"
+        - "ERROR DE DINERO"
+
+    slot_publish_times_utc:               # these ARE the cron fire times
+      1: "13:00"                          # 7 AM Mexico City / 8 AM Bogota / 10 AM Buenos Aires / 3 PM Madrid
