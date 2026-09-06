@@ -35,7 +35,7 @@ channels:
       enabled: true
       reframe: "fill"                  # portrait TikTok -> 16:9 1920x1080 fullscreen (centre content panel; drops title bar + dead space)
       reframe_y_pct: 0.0               # nudge crop down (+) / up (-) if content gets clipped
-      zoom_crop_pct: 2.0
+      zoom_crop_pct: 3.0
       speed: 1.02
       hflip: false
       fade_seconds: 0.4
@@ -46,6 +46,11 @@ channels:
       loudnorm: true
       volume_gain_db: 0.0
       blur_regions: []
+      hook_caption:                    # burned-in hook, first 3s (retention + transformation)
+        enabled: true
+        seconds: 3
+        position: top
+        size_pct: 5.6
       brand_overlay:                     # small corner mark = the channel's own logo
         enabled: true
         image: "assets/brand_badge.png"
