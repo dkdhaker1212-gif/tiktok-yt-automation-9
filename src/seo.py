@@ -367,6 +367,8 @@ def _fallback(caption, tiktok_tags, base_tags, is_short, recent_titles=None,
         [*base_tags, *[t.lower() for t in tiktok_tags], *kws,
          "shorts", "viral", "trending", "fyp"]))[:22]
     hs = (["#shorts"] if is_short else []) + _LANG_HASHTAGS.get(language, _LANG_HASHTAGS["en"])
+    if not is_short:
+        hs = [h for h in hs if h.lower() != "#shorts"]
     desc_lead = base if (_junk_cap or len(cap_clean) < 12) else cap_clean[:150]
     desc = "\n".join(filter(None, [
         desc_lead,
