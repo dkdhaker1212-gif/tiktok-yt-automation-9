@@ -33,6 +33,8 @@ channels:
     seo_language: "es"                    # Gemini writes Spanish title/description/tags
     edit:
       enabled: true
+      reframe: "fill"                  # portrait TikTok -> 16:9 1920x1080 fullscreen (centre content panel; drops title bar + dead space)
+      reframe_y_pct: 0.0               # nudge crop down (+) / up (-) if content gets clipped
       zoom_crop_pct: 2.0
       speed: 1.02
       hflip: false
