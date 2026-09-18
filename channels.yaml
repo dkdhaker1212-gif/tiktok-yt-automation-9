@@ -18,7 +18,7 @@ channels:
                    habitos de dinero, finanzas para jovenes, como administrar el dinero, ahorro,
                    dinero, economia personal, consejos financieros, como invertir, riqueza]
     youtube_category_id: "27"             # 27 Education
-    enabled: true
+    enabled: false                        # PAUSED 2026-09-18: no traction, stop posting (see memory)
     max_retry_days: 7
 
     content_mode: longform                # no #Shorts tag, keep source aspect
