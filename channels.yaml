@@ -3,7 +3,8 @@
 
 channels:
   - id: channel_9                         # unique; used in DB, logs, secret names
-    tiktok_username: "las_finanzas_personales"   # no @ -- Spanish personal-finance education (176.9K followers)
+    tiktok_username: "finanzasconlasakle"  # no @ -- Spanish personal-finance education, 37.6K followers, no YouTube found. Swapped in 2026-09-29: original source @las_finanzas_personales no longer exists on TikTok (account gone -- "Couldn't find this account"), broke the daily upload.
+    tiktok_username_backup: "franromerooriginal"  # no @ -- backup only, used automatically if the primary has nothing left or every candidate it offers fails to post (copyright claim, download block, etc.). 1.6M followers, established Spanish finance educator -- not vetted as carefully as the primary since it's an emergency fallback, not the everyday source.
     youtube_channel_name: "Dinero Claro"
     owner_email: "dhakerkrishti@gmail.com"
 
